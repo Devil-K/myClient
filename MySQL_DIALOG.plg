@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: MySQL_DIALOG - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPD680.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/MySQL_DIALOG.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\Administrator\Desktop\CUS_OPCClient数据库修改后的(1)\CUS_OPCClient\MySQL_DIALOG.cpp"
+]
+Creating command line "cl.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPD680.tmp" 
+Creating temporary file "C:\Users\ADMINI~1\AppData\Local\Temp\RSPD681.tmp" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/MySQL_DIALOG.pdb" /debug /machine:I386 /out:"Debug/MySQL_DIALOG.exe" /pdbtype:sept 
+".\Debug\MySQL_DIALOG.obj"
+]
+Creating command line "link.exe @C:\Users\ADMINI~1\AppData\Local\Temp\RSPD681.tmp"
+<h3>Output Window</h3>
+Compiling...
+MySQL_DIALOG.cpp
+c:\users\administrator\desktop\cus_opcclient数据库修改后的(1)\cus_opcclient\mysql_dialog.cpp(97) : warning C4101: 'row' : unreferenced local variable
+c:\users\administrator\desktop\cus_opcclient数据库修改后的(1)\cus_opcclient\mysql_dialog.cpp(112) : warning C4700: local variable 'info' used without having been initialized
+Linking...
+nafxcwd.lib(thrdcore.obj) : error LNK2001: unresolved external symbol __endthreadex
+nafxcwd.lib(thrdcore.obj) : error LNK2001: unresolved external symbol __beginthreadex
+libcd.lib(crt0.obj) : error LNK2001: unresolved external symbol _main
+Debug/MySQL_DIALOG.exe : fatal error LNK1120: 3 unresolved externals
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+MySQL_DIALOG.exe - 4 error(s), 2 warning(s)
+</pre>
+</body>
+</html>

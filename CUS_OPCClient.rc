@@ -1,0 +1,663 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (ÖÐ¹ú) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\CUS_OPCClient.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SERVER_DIALOG DIALOG DISCARDABLE  0, 0, 200, 226
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select OPC Server"
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDT_SERVERNAME,7,18,186,12,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CBO_NODE,7,47,186,102,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "1.0",IDC_RAD_SERVER1,"Button",BS_AUTORADIOBUTTON,14,75,
+                    89,10
+    CONTROL         "2.0",IDC_RAD_SERVER2,"Button",BS_AUTORADIOBUTTON,14,86,
+                    89,10
+    LISTBOX         IDC_LST_SERVER,7,115,186,84,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "OK",IDOK,33,205,50,14
+    PUSHBUTTON      "Refresh List",IDC_BTN_REFRESH,88,205,50,14
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,143,205,50,14
+    LTEXT           "Server Name:",IDC_STATIC,7,7,66,10
+    LTEXT           "Computer Name(IP):",IDC_STATIC,7,36,66,10
+    LTEXT           "Server Name List:",IDC_STATIC,7,104,66,10
+    GROUPBOX        "OPC Version:",IDC_STATIC,7,63,186,36
+END
+
+IDD_GROUP_DIALOG DIALOG DISCARDABLE  0, 0, 200, 188
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Group"
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDT_GROUPNAME,7,18,186,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_UPDATERATE,7,47,186,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_DEADBAND,7,76,186,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_TIMEBIAS,7,105,186,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_LOCALID,7,134,186,12,ES_AUTOHSCROLL
+    CONTROL         "Active",IDC_CHK_ACTIVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,154,54,11
+    DEFPUSHBUTTON   "OK",IDOK,88,167,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,143,167,50,14
+    LTEXT           "Group Name:",IDC_STATIC,7,7,66,10
+    LTEXT           "Update Rate(ms):",IDC_STATIC,7,36,83,10
+    LTEXT           "Deadband(%FS):",IDC_STATIC,7,65,66,10
+    LTEXT           "Time Bias(minutes):",IDC_STATIC,7,94,66,10
+    LTEXT           "Local ID:",IDC_STATIC,7,123,66,10
+END
+
+IDD_ITEM_DIALOG DIALOGEX 0, 0, 240, 258
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Item"
+FONT 8, "Microsoft Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDT_ITEMNAME,7,17,170,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_ACCESSPATH,7,46,170,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_FILTER,7,75,170,12,ES_AUTOHSCROLL
+    LISTBOX         IDC_FLAT,7,102,226,94,LBS_NOINTEGRALHEIGHT | NOT 
+                    WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Tree1",IDC_TREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | WS_BORDER | WS_TABSTOP,
+                    7,102,126,94,WS_EX_CLIENTEDGE
+    LISTBOX         IDC_TAG_LIST,137,102,96,94,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Use native type",IDC_RAD_NATIVE,"Button",
+                    BS_AUTORADIOBUTTON,14,211,69,8
+    CONTROL         "Boolean",IDC_RAD_BOOL,"Button",BS_AUTORADIOBUTTON,14,
+                    223,69,8
+    CONTROL         "Short int",IDC_RAD_SHORT,"Button",BS_AUTORADIOBUTTON,14,
+                    235,69,8
+    CONTROL         "Long int",IDC_RAD_LONG,"Button",BS_AUTORADIOBUTTON,92,
+                    213,69,8
+    CONTROL         "Float",IDC_RAD_FLOAT,"Button",BS_AUTORADIOBUTTON,92,225,
+                    69,8
+    CONTROL         "Double",IDC_RAD_DOUBLE,"Button",BS_AUTORADIOBUTTON,92,
+                    237,69,8
+    CONTROL         "String",IDC_RAD_STRING,"Button",BS_AUTORADIOBUTTON,164,
+                    213,69,8
+    PUSHBUTTON      "Add Item",IDC_BTN_ADDITEM,183,7,50,14
+    PUSHBUTTON      "Add All Item",IDC_BTN_ADDALL,183,26,50,14
+    PUSHBUTTON      "Properties...",IDC_BTN_PROPERTIES,183,45,50,14
+    DEFPUSHBUTTON   "Close",IDCANCEL,183,64,50,14
+    LTEXT           "Item Name:",IDC_STATIC,7,7,66,10
+    LTEXT           "Access Path:",IDC_STATIC,7,35,66,10
+    GROUPBOX        "Item Data Type:",IDC_STATIC,7,199,226,52
+    LTEXT           "Browse Items:",IDC_STATIC,7,92,66,10
+    LTEXT           "Filter Character:",IDC_STATIC,7,64,66,10
+END
+
+IDD_ITEM_PROPERTIES DIALOG DISCARDABLE  0, 0, 200, 196
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Item Properties"
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDCANCEL,143,175,50,14
+    CONTROL         "List1",IDC_LIST,"SysListView32",LVS_REPORT | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,186,161
+END
+
+IDD_WRITE_DIALOG DIALOG DISCARDABLE  0, 0, 200, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Write Item"
+FONT 8, "Microsoft Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDT_VALUE,7,18,186,12,ES_AUTOHSCROLL
+    CONTROL         "Asyncronous",IDC_CHK_ASYNC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,38,61,11
+    PUSHBUTTON      "OK",IDOK,88,40,50,14
+    DEFPUSHBUTTON   "Cancel",IDCANCEL,143,40,50,14
+    LTEXT           "Value:",IDC_STATIC,7,7,49,10
+END
+
+IDD_MySQL_DIALOG DIALOG DISCARDABLE  0, 0, 233, 136
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ConnectMySQL"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "Connect",IDOK,34,92,50,14
+    EDITTEXT        IDC_EDIT1,79,19,136,15,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,79,54,136,15,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,24,19,30,8
+    LTEXT           "PassWord:",IDC_STATIC,24,54,46,8
+    DEFPUSHBUTTON   "UploadDB",DIO_InsertDB,141,91,50,14
+END
+
+IDD_UPDATE DIALOG DISCARDABLE  0, 0, 187, 96
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Update"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "check",IDOK,19,54,50,14
+    PUSHBUTTON      "update",IDUPDATE,100,53,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_SERVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 219
+    END
+
+    IDD_GROUP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 181
+    END
+
+    IDD_ITEM_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_ITEM_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 189
+    END
+
+    IDD_WRITE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_MySQL_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 129
+    END
+
+    IDD_UPDATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 89
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPC_GROUP            "Add OPC Group\nadd opc groupÌí¼ÓOPC×é"
+    ID_OPC_ITEM             "Add OPC Item\nadd opc item"
+    ID_OPC_CONNECT          "connect\nconnect"
+    ID_OPC_DISCONNECT       "disconnect\\disconnect"
+    ID_OPC_DELETE_GROUP     "Delete selected group\ndelete selected group"
+    ID_OPC_DELETE_SERVER    "Delete selected opc server\ndelete selected opc server"
+    ID_ITEM_PROPERTIES      "Item Properties\nitem properties"
+    ID_ITEM_WRITE           "Write item\nwrite item"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_ITEM_REMOVE          "Remove Item\nremove item"
+END
+
+#endif    // Chinese (ÖÐ¹ú) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 234, 82
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,23
+    LTEXT           "Version:CMX_OPCClient Version 1.0",IDC_STATIC,54,21,164,
+                    8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,177,61,50,14,WS_GROUP
+    LTEXT           "e-mail :1771947201@qq.com ",IDC_STATIC,54,35,123,8,
+                    WS_DISABLED
+    LTEXT           "QQ : 1771947201",IDC_STATIC,55,49,123,8,WS_DISABLED
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP  MOVEABLE PURE   "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Export Configure File...",    ID_FILE_EXPORT
+        MENUITEM SEPARATOR
+        MENUITEM "Export Error File...",        ID_FILE_EXPORT_LOG
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&OPC Server"
+    BEGIN
+        MENUITEM "Add OPCServer",               ID_OPC_SERVER
+        MENUITEM "Add Group",                   ID_OPC_GROUP
+        MENUITEM "Add Item",                    ID_OPC_ITEM
+    END
+    POPUP "MySQL"
+    BEGIN
+        MENUITEM "Connect",                     ConnectDB
+    END
+    POPUP "Trans"
+    BEGIN
+        MENUITEM "AutomaticTrans",              AutomaticTrans
+        MENUITEM "UpLoad",                      UpLoad
+    END
+    POPUP "&Windows"
+    BEGIN
+        MENUITEM "&ToolBar (hide)",             ID_VIEW_TOOLBAR
+        MENUITEM "&StatusBar(Hide)",            ID_VIEW_STATUS_BAR
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "Version Update",              VersionUP
+        MENUITEM "About",                       ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\CUS_OPCClient.ico"
+IDR_CUS_OPTYPE          ICON    DISCARDABLE     "res\\OPCClientDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR DISCARDABLE  85, 22
+BEGIN
+    BUTTON      ID_FILE_NEW
+    SEPARATOR
+    BUTTON      ID_FILE_OPEN
+    SEPARATOR
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_OPC_SERVER
+    SEPARATOR
+    BUTTON      ID_OPC_GROUP
+    SEPARATOR
+    BUTTON      ID_OPC_ITEM
+    SEPARATOR
+    BUTTON      ID_APP_modify
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Chen Maoxiang\0"
+            VALUE "FileDescription", "CMX_OPCClient MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "CMX_OPCClient\0"
+            VALUE "LegalCopyright", "Copyright © 2006, Chen Maoxiang All Rights Reserved\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "CMX_OPCClient.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "CMX_OPCClient Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "CMX_OPCClient\n\nCMX_OPC\nCMX_OPCClient Items Configuration Files(*.cmx)\n.cmx\nCMX_OPCClient.ConfigurationFile\nCMX_OPCClient Items Configuration Document"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "ConnectMySQL"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBarÒþ²Ø¹¤¾ßÀ¸"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+    ID_VIEW_AUTOARRANGE     "Arrange icons on a grid."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_SMALLICON       "Display items by using small icons.\nSmall Icons"
+    ID_VIEW_LARGEICON       "Display items by using large icons.\nLarge Icons"
+    ID_VIEW_LIST            "Displays items in a list.\nList"
+    ID_VIEW_DETAILS         "Displays detailed information about each item in the window.\nDetails"
+    ID_VIEW_LINEUP          "Arranges icons in a grid."
+    ID_VIEW_BYNAME          "Sorts the icons alphabetically."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPC_SERVER           "Ìí¼ÓOPCServer"
+    ID_OPC_GROUP            "add group Ìí¼Ó×é£¨ÂÒÂë£©"
+    ID_OPC_ITEM             "Add OPC  item£¨Ìí¼ÓÏî£©"
+    ID_OPC_CONNECT          "connect\nconnect"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ConnectDB               "Á¬½ÓÊý¾Ý¿â"
+    Help                    "°ïÖú"
+    AutomaticTrans          "AutomaticTrans×Ô¶¯ÉÏ´«"
+    UpLoad                  "only one upload "
+    VersionUP               "Version update "
+    ID_APP_modify           "ÐÞ¸ÄÊý¾Ý"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDHELP                  "¹ØÓÚ"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\CUS_OPCClient.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

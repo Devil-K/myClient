@@ -1,0 +1,49 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: CUS_OPCClient - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\59968\AppData\Local\Temp\RSPE36D.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\Users\59968\Desktop\opc\CUS_OPCClient\ServerDialog.cpp"
+]
+Creating command line "cl.exe @C:\Users\59968\AppData\Local\Temp\RSPE36D.tmp" 
+Creating temporary file "C:\Users\59968\AppData\Local\Temp\RSPE36E.tmp" with contents
+[
+mpr.lib /nologo /subsystem:windows /incremental:yes /pdb:".\Debug/CUS_OPCClient.pdb" /debug /machine:I386 /out:".\Debug/CMX_OPCClient.exe" 
+.\Debug\ConnectionPoint.obj
+.\Debug\CUS_OPCClient.obj
+.\Debug\GroupDialog.obj
+.\Debug\IAdvsink.obj
+.\Debug\ItemDialog.obj
+.\Debug\ItemPropertiesDialog.obj
+.\Debug\LeftView.obj
+.\Debug\MainFrm.obj
+.\Debug\MessageView.obj
+.\Debug\MySQL_DIALOG.obj
+.\Debug\OPCClientDoc.obj
+.\Debug\OPCClientView.obj
+.\Debug\opcserver.obj
+.\Debug\ServerDialog.obj
+.\Debug\StdAfx.obj
+.\Debug\UPDATE.obj
+.\Debug\WriteDialog.obj
+.\Debug\CUS_OPCClient.res
+]
+Creating command line "link.exe @C:\Users\59968\AppData\Local\Temp\RSPE36E.tmp"
+<h3>Output Window</h3>
+Compiling...
+ServerDialog.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+CMX_OPCClient.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
